@@ -1,3 +1,3 @@
 # Sweet Tours
 
-Some Web UI stuff I'm doing for fun using vanilla CSS. It makes you appreciate the tools and technology like SASS that much more!
+Some Web UI stuff just messing around. No JS or framework. Just some HTML, CSS/SASS
