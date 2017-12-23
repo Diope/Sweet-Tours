@@ -35,6 +35,15 @@
       }
    }
 
+   &--green {
+      background-color: $color-primary-light;
+      color: $color-white;
+
+      &::after {
+         background-color: $color-primary-light;
+      }
+   }
+
    &--animated {
       animation: moveInButton .5s ease-out .50s;
       animation-fill-mode: backwards;
