@@ -10,20 +10,24 @@
    &__content {
       @include absCenter;
       @include boxShadow-main;
-      width: 75%;
+      width: 70%;
       background-color: $color-white;
       border-radius: 4px;
+      display: table;
+      overflow: hidden;
 
    }
 
    &__right {
       width: 66.6667%;
-
+      display: table-cell;
+      vertical-align: middle;
+      padding: 3rem 5rem;
    }
 
    &__left {
       width: 33.3333%;
-      
+      display: table-cell;
    }
 
    &__img {
@@ -32,6 +36,20 @@
    }
 
    &__text {
+      font-size: 1.4rem;
+      margin-bottom: 4rem;
 
+      -moz-column-count: 2;
+      -moz-column-gap: 3rem;
+      -moz-column-rule: 1px solid $color-gray-light-main;
+
+      column-count: 2;
+      column-gap: 3rem;
+      column-rule: 1px solid $color-gray-light-main;
+
+      -moz-hyphens: auto;
+      -ms-hyphens: auto;
+      -webkit-hyphens: auto;
+      hyphens: auto;
    }
 }
