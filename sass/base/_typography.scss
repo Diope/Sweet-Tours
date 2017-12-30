@@ -4,7 +4,6 @@ body {
    font-size: $default-font-size;
    line-height: 1.7;
    color: $color-gray-dark;
-   padding: 2rem;
 }
 
 .heading-primary {
@@ -14,6 +13,7 @@ body {
    backface-visibility: hidden;
    margin-bottom: 4rem;
  
+   
     &--main {
        display: block;
        letter-spacing: 2rem;
@@ -22,6 +22,11 @@ body {
  
        animation-name: moveInFromLeft;
        animation-duration: 1.5s;
+
+       @include respond(phone) {
+           letter-spacing: 1rem;
+           font-family: 5rem;
+       }
     }
  
     &--sub {
@@ -32,6 +37,10 @@ body {
  
        animation-name: moveInFromRight;
        animation-duration: 1.5s;
+
+       @include respond(phone) {
+           letter-spacing: .5rem;
+       }
  
    }
 }
@@ -43,12 +52,20 @@ body {
    display: inline-block;
    letter-spacing: .2rem;
    background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
-   
-
    -webkit-background-clip: text;
    -moz-background-clip: text;
    color: transparent;
+
+   @include respond(tab-port) {
+       font-size: 3rem;
+   }
+
+   @include respond(phone) {
+       font-size: 2.5rem;
+   }
 }
+   
+
 
 .heading-tertiary {
    font-size: $default-font-size;

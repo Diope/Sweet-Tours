@@ -16,3 +16,40 @@
 @mixin boxShadow-main {
    box-shadow: 0 2rem 4rem rgba($color: $color-black, $alpha: .2);
 }
+
+
+/* 
+
+Media Query
+
+0 - 600px:     Phone
+600 - 900px:   Tablet Portrait
+900 -  1200px: Tablet Landscape
+[1200-1800]:   Normal styles
+1800px + :     UHD Desktop
+
+Breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- big-desk
+
+ORDER: Base + typography -> General Layout + grid -> page layout -> components
+
+1em = 16px
+*/
+
+@mixin respond($breakpoint) {
+   @if $breakpoint == phone {
+      @media (max-width: 37.5em) { @content }; //600px
+   }
+   @if $breakpoint == tab-port {
+      @media (max-width: 56.25em) { @content }; //900px
+   }
+   @if $breakpoint == tab-land {
+      @media (max-width: 75em) { @content }; //1200px
+   }
+   @if $breakpoint == big-desk {
+      @media (max-width: 112.5em) { @content }; //1800px
+   }
+}
